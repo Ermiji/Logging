@@ -1,21 +1,22 @@
 package com.company;
+import java.util.ArrayList;
 import java.util.List;
 
 public class User {
     private long id;
     private String username;
     private String password;
-    private List<Role> role;
+    private List<Role> roles;
 
     public User(){
-
+        roles= new ArrayList<Role>();
     }
 
-    public User(long id, String username, String password, List<Role> role){
+    public User(long id, String username, String password, List<Role> roles){
         this.id = id;
         this.username = username;
         this.password = password;
-        this.role = role;
+        this.roles = roles;
     }
 
     public long getId() {
@@ -42,11 +43,11 @@ public class User {
         this.password = password;
     }
 
-    public List<Role> getRole() {
-        return role;
+    public List<Role> getRoles() {
+        return roles;
     }
 
-    public void setRole(List<Role> role) {
-        this.role = role;
+    public void setRoles(List<Role> roles) {
+        this.roles = roles;
     }
 }
