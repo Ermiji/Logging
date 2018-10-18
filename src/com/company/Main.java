@@ -41,13 +41,17 @@ localRoles.add(role);
             selectedRole.setName(input.nextLine());
             Boolean flag=false;
             for(User u:users){
-             for (Role r: u.getRoles()) {
-                 if (r.getName().equalsIgnoreCase(selectedRole.getName())) {
-                     System.out.println("You already have that role.  ");
-                     flag = true;
-                     break;
-                 }
-             }
+                if(u.getUsername().equalsIgnoreCase(user.getUsername())) {
+                    for (Role r : u.getRoles()) {
+                        //it checks if username is allready
+                        //in the selected role
+                        if (r.getName().equalsIgnoreCase(selectedRole.getName())) {
+                            System.out.println("You already have that role.  ");
+                            flag = true;
+                            break;
+                        }
+                    }
+                }
             }
             if(!flag) {
                 user.getRoles().add(selectedRole);
