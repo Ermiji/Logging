@@ -23,8 +23,7 @@ localRoles.add(role);
         System.out.println("Do you want to sign up? ");
         answer = input.nextLine();
         while(answer.equalsIgnoreCase("y")) {
-//            System.out.println("Do you want to sign up? ");
-     //       answer = input.nextLine();
+
             User user = new User();
           //  Role role = new Role();
             System.out.println("Create a user name: ");
